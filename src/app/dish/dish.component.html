@@ -1,0 +1,61 @@
+<section class="shopJ">
+    <h1>Shop By Category</h1>
+    <p>Browse through your favorite categories. We've got them all!</p>
+    <hr />
+    <div class="category-bar">
+      <div
+        class="category-item"
+        (click)="filterDishes('all')"
+        [ngClass]="{ active: selectedCategory === 'all' }"
+      >
+        All
+      </div>
+      <div
+        class="category-item"
+        (click)="filterDishes('main')"
+        [ngClass]="{ active: selectedCategory === 'main' }"
+      >
+        Main Course
+      </div>
+      <div
+        class="category-item"
+        (click)="filterDishes('dessert')"
+        [ngClass]="{ active: selectedCategory === 'dessert' }"
+      >
+        Dessert
+      </div>
+      <div
+        class="category-item"
+        (click)="filterDishes('soup')"
+        [ngClass]="{ active: selectedCategory === 'soup' }"
+      >
+        Soup
+      </div>
+    </div>
+  
+    <div class="dish-container">
+      <div
+        *ngFor="let dish of filteredDishes"
+        class="dish-card"
+        (click)="selectDish(dish)"
+      >
+        <img [src]="dish.image" alt="Dish Image" />
+        <div class="dish-info">
+          <h3>{{ dish.name }}</h3>
+          <p>{{ dish.description }}</p>
+          <p class="price">₹ {{ dish.price }}</p>
+          <div class="quantity-select">
+            <label for="quantity">Quantity:</label>
+            <input
+              type="number"
+              id="quantity"
+              [(ngModel)]="dish.quantity"
+              min="1"
+            />
+          </div>
+          <button (click)="buy(dish)">ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  

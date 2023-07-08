@@ -1,0 +1,141 @@
+.shopJ {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  .shopJ h1 {
+    font-size: 36px;
+    font-weight: 600;
+  }
+  
+  .shopJ p {
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+  }
+  
+  .category-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .category-item {
+    flex: 1 0 100%;
+    padding: 8px 16px;
+    margin: 5px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+    text-align: center;
+  }
+  
+  .category-item:hover {
+    color: #ff7200;
+  }
+  
+  .category-item.active {
+    color: #ff7200;
+  }
+  
+  .dish-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .dish-card {
+    width: calc(100% - 40px);
+    max-width: 300px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .dish-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .dish-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    padding: 20px;
+    border-radius: 30px;
+  }
+  
+  .dish-card .dish-info {
+    padding: 10px;
+  }
+  
+  .dish-card h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .dish-card p {
+    margin: 8px 0;
+  }
+  
+  .dish-card .price {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .quantity-select {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input[type="number"] {
+    width: 50px;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #ff7200;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #ff7200;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .dish-card {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  
+    .dish-card:nth-child(4n) {
+      margin-right: 0;
+    }
+    .category-item {
+      flex-basis: auto;
+    }
+  }
+  

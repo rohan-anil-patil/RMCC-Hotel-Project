@@ -1,0 +1,81 @@
+<div class="main">
+  <nav class="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">RMCC</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        aria-label="Toggle navigation"
+        (click)="toggleMenu()"
+      >
+        <span>
+          <i class="fa-solid fa-bars"></i>
+        </span>
+      </button>
+      <ul class="menu" [class.open]="isMenuOpen" id="navbarSupportedContent">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            routerLink="/"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >HOME</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/dish"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >DISH</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/about"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >ABOUT</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/gallary"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+          >
+            GALLERY</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/contact"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+          >
+            CONTACT</a
+          >
+        </li>
+        <li class="search-bar">
+          <form class="d-flex">
+            <input
+              class="form-control"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<router-outlet></router-outlet>

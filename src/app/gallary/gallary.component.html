@@ -1,0 +1,19 @@
+<div class="text">
+    <h1>Gallery</h1> 
+    <p>The art gallery that you will fall in love with.</p>
+ </div>
+ <hr/>
+ <div class="gallery">
+   <div class="filters">
+     <button (click)="sortImages('all')">All</button>
+     <button (click)="sortImages('pool')">Pool Side</button>
+     <button (click)="sortImages('lobby')">Lobby Area</button>
+     <button (click)="sortImages('garden')">Garden Side</button>
+   </div>
+   <div class="images">
+     <div *ngFor="let image of sortedImages" class="image">
+       <img [src]="image.url" alt="Gallery Image" />
+     </div>
+   </div>
+ </div>
+ 
