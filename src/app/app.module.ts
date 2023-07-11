@@ -7,8 +7,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { DishComponent } from './dish/dish.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ContactComponent } from './contact/contact.component';
 import { GallaryComponent } from './gallary/gallary.component';
+import { AdminComponent } from './admin/admin.component';
+import { MenuComponent } from './menu/menu.component';
+import { OrderComponent } from './order/order.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,9 @@ import { GallaryComponent } from './gallary/gallary.component';
     HomeComponent,
     DishComponent,
     GallaryComponent,
-    ContactComponent
+    AdminComponent,
+    MenuComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,9 @@
-<div class="main">
+<div
+  class="main"
+  *ngIf="
+    !isOnAdminPage && currentRoute !== '/menu' && currentRoute !== '/order'
+  "
+>
   <nav class="navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">RMCC</a>
@@ -46,19 +51,16 @@
             routerLink="/gallary"
             routerLinkActive="active"
             ariaCurrentWhenActive="page"
-          >
-            GALLERY</a
+            >GALLERY</a
           >
         </li>
-
         <li class="nav-item">
           <a
             class="nav-link"
-            routerLink="/contact"
+            routerLink="/admin"
             routerLinkActive="active"
             ariaCurrentWhenActive="page"
-          >
-            CONTACT</a
+            >ADMIN</a
           >
         </li>
         <li class="search-bar">
@@ -78,4 +80,47 @@
     </div>
   </nav>
 </div>
+
+<div
+  class="admin-navbar"
+  *ngIf="isOnAdminPage || currentRoute === '/menu' || currentRoute === '/order'"
+>
+  <div class="sidebar" [ngClass]="{ show: isSidebarOpen }">
+    <button class="toggle-button" (click)="toggleSidebar()">
+      <i class="fas fa-bars"></i>
+    </button>
+    <ul>
+      <li>
+        <a routerLink="/dashboard">
+          <i class="fas fa-home icon"></i>
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a routerLink="/order">
+          <i class="fas fa-users icon"></i>
+          ORDER
+        </a>
+      </li>
+      <li>
+        <a routerLink="/menu">
+          <i class="fas fa-shopping-cart icon"></i>
+          MENU
+        </a>
+      </li>
+      <li>
+        <a routerLink="/user">
+          <i class="fas fa-shopping-cart icon"></i>
+          User
+        </a>
+      </li>
+      <!-- Add more menu items as needed -->
+    </ul>
+  </div>
+  <div class="content" [ngClass]="{ show: isSidebarOpen }">
+    <!-- Add your content here -->
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
 <router-outlet></router-outlet>
