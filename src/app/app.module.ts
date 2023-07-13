@@ -11,6 +11,7 @@ import { GallaryComponent } from './gallary/gallary.component';
 import { AdminComponent } from './admin/admin.component';
 import { MenuComponent } from './menu/menu.component';
 import { OrderComponent } from './order/order.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { OrderComponent } from './order/order.component';
     GallaryComponent,
     AdminComponent,
     MenuComponent,
-    OrderComponent
+    OrderComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,

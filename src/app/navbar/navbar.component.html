@@ -79,48 +79,7 @@
       </ul>
     </div>
   </nav>
+  <router-outlet></router-outlet>
 </div>
 
-<div
-  class="admin-navbar"
-  *ngIf="isOnAdminPage || currentRoute === '/menu' || currentRoute === '/order'"
->
-  <div class="sidebar" [ngClass]="{ show: isSidebarOpen }">
-    <button class="toggle-button" (click)="toggleSidebar()">
-      <i class="fas fa-bars"></i>
-    </button>
-    <ul>
-      <li>
-        <a routerLink="/dashboard">
-          <i class="fas fa-home icon"></i>
-          Dashboard
-        </a>
-      </li>
-      <li>
-        <a routerLink="/order">
-          <i class="fas fa-users icon"></i>
-          ORDER
-        </a>
-      </li>
-      <li>
-        <a routerLink="/menu">
-          <i class="fas fa-shopping-cart icon"></i>
-          MENU
-        </a>
-      </li>
-      <li>
-        <a routerLink="/user">
-          <i class="fas fa-shopping-cart icon"></i>
-          User
-        </a>
-      </li>
-      <!-- Add more menu items as needed -->
-    </ul>
-  </div>
-  <div class="content" [ngClass]="{ show: isSidebarOpen }">
-    <!-- Add your content here -->
-    <router-outlet></router-outlet>
-  </div>
-</div>
-
-<router-outlet></router-outlet>
+<app-sidenav></app-sidenav>

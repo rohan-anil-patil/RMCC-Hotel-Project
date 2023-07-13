@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css'],
+  selector: 'app-sidenav',
+  templateUrl: './sidenav.component.html',
+  styleUrls: ['./sidenav.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class SidenavComponent implements OnInit {
   isMenuOpen: boolean = false;
   isOnAdminPage: boolean = false;
   isSidebarOpen: boolean = true;
